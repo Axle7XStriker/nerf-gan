@@ -1,0 +1,25 @@
+[project]
+name = "GANerf"
+version = "0.1.0"
+description = "Playground for pose stuff."
+
+dependencies = [
+    "ftfy",
+    "regex",
+    "tqdm",
+    "colour",
+    "easydict",
+    "termcolor",
+    "imageio",
+    "trimesh",
+    "nerfstudio>=0.2.0",
+    "colour-checker-detection",
+    "ipdb",
+    "torchtyping",
+]
+
+[tool.setuptools.packages.find]
+include = ["ganerf*",]
+
+[project.entry-points.'nerfstudio.method_configs']
+ganerf = 'ganerf.ganerf_config:ganerf_method'
